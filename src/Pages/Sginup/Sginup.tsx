@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { InfinitySpin } from 'react-loader-spinner';
 import { useUserContext } from '../../Context/UserContext';
+import { Helmet } from 'react-helmet';
 
 type User = {
   name: string;
@@ -229,6 +230,9 @@ const Sginup = () => {
           </Button>
         </Link>
       </div>
+      <Helmet>
+        <title>Sginup</title>
+      </Helmet>
     </div>
   );
 };

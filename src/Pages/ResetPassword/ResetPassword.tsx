@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import { useUserContext } from '../../Context/UserContext';
 import Loader from '../../Components/Loader/Loader';
+import { Helmet } from 'react-helmet';
 const cookies = new Cookies();
 
 const useStyle = makeStyles(({ palette, spacing }) => ({
@@ -134,6 +135,9 @@ const ResetPassword = () => {
           Reset
         </Button>
       </form>
+      <Helmet>
+        <title>ResetPassword</title>
+      </Helmet>
     </div>
   );
 };

@@ -13,7 +13,8 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     minWidth: 0,
     margin: '46px 0',
     [breakpoints.down('sm')]: {
-      margin: '20px 0',
+      width: '100%',
+      margin: '32px',
     },
   },
   verticalImage: {
@@ -27,6 +28,7 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     height: '400px',
     [breakpoints.down('sm')]: {
       height: '300px',
+      width: '100%',
     },
   },
 
@@ -47,7 +49,7 @@ const useStyles = makeStyles(({ breakpoints }) => ({
   },
 }));
 
-const HeroSecition = () => {
+const HeroSection = () => {
   const settings: Settings = {
     dots: true,
     infinite: true,
@@ -86,4 +88,4 @@ const HeroSecition = () => {
   );
 };
 
-export default HeroSecition;
+export default HeroSection;

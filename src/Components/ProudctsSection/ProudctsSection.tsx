@@ -14,9 +14,6 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     flexWrap: 'wrap',
     gap: '30px',
     width: '100%',
-    [breakpoints.down('sm')]: {
-      padding: '40px',
-    },
   },
   content: {
     display: 'flex',

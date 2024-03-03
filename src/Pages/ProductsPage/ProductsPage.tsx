@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Loader from '../../Components/Loader/Loader';
 import { useWishListData } from '../../Context/hooks';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(({ breakpoints }) => ({
   root: {
@@ -100,6 +101,9 @@ const ProductsPage = () => {
           ))}
         {error && <h1>{error}</h1>}
       </div>
+      <Helmet>
+        <title>Products</title>
+      </Helmet>
     </div>
   );
 };

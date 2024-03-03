@@ -1,8 +1,8 @@
+import { Helmet } from 'react-helmet';
 import { CategorySection } from '../../Components/CategorySection/CategorySection';
-import HeroSecition from '../../Components/HeroSection/HeroSecition';
+import HeroSection from '../../Components/HeroSection/HeroSection';
 import ProudctsSection from '../../Components/ProudctsSection/ProudctsSection';
 import makeStyles from '../../makeStyles';
-import './style.css';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -14,7 +14,6 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     minWidth: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    [breakpoints.down('sm')]: {},
   },
   content: {
     display: 'flex',
@@ -24,6 +23,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     width: '100%',
     padding: spacing(2),
     marginTop: '50px',
+    [breakpoints.down('sm')]: {
+      padding: spacing(8),
+    },
   },
 }));
 
@@ -33,12 +35,15 @@ const Home = () => {
   return (
     <div className={classes.root}>
       <div className={classes.slider}>
-        <HeroSecition />
+        <HeroSection />
       </div>
       <CategorySection />
       <div className={classes.content}>
         <ProudctsSection />
       </div>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
     </div>
   );
 };

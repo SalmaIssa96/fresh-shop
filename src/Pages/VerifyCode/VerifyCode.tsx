@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Loader from '../../Components/Loader/Loader';
+import { Helmet } from 'react-helmet';
 
 const useStyle = makeStyles(({ palette, spacing }) => ({
   root: {
@@ -98,6 +99,9 @@ const VerifyCode = () => {
           Verify
         </Button>
       </form>
+      <Helmet>
+        <title>VerifyCode</title>
+      </Helmet>
     </div>
   );
 };

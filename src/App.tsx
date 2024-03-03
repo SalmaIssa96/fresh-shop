@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import Layout from './Pages/Layout/Layout';
 import Home from './Pages/Home/Home';
@@ -166,7 +167,9 @@ function App() {
     <UserContextProvider>
       <CartcontextProvider>
         <ThemeProvider theme={theme}>
-          <RouterProvider router={routers} />
+          <HelmetProvider>
+            <RouterProvider router={routers} />
+          </HelmetProvider>
         </ThemeProvider>
       </CartcontextProvider>
     </UserContextProvider>

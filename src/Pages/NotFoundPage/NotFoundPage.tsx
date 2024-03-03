@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import notFoundImage from '../../assets/004.jpg';
 import makeStyles from '../../makeStyles';
 
@@ -19,6 +20,10 @@ const NotFoundPage = () => {
   return (
     <div className={classes.root}>
       <img className={classes.image} src={notFoundImage} alt="404 Not Found" />
+
+      <Helmet>
+        <title> NotFound Page </title>
+      </Helmet>
     </div>
   );
 };

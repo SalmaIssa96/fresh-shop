@@ -4,6 +4,7 @@ import WishListCard from '../../Components/WishListCard/WishListCard';
 import { ProductsResponseType } from '../../types';
 import makeStyles from '../../makeStyles';
 import Loader from '../../Components/Loader/Loader';
+import { Helmet } from 'react-helmet-async';
 
 const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
   root: {
@@ -57,14 +58,19 @@ const WhishList = () => {
   if (!wishListData?.length || !wishListData)
     return <div className={classes.empty}>NO WishList</div>;
   return (
-    <div className={classes.root}>
-      <Typography className={classes.title}>My Whish List</Typography>
-      {isLoading && <Loader />}
-      {wishListData &&
-        wishListData.map((item: any) => {
-          return <WishListCard product={item} key={item.id} />;
-        })}
-    </div>
+    <>
+      <div className={classes.root}>
+        <Typography className={classes.title}>My Whish List</Typography>
+        {isLoading && <Loader />}
+        {wishListData &&
+          wishListData.map((item: any) => {
+            return <WishListCard product={item} key={item.id} />;
+          })}
+      </div>
+      <Helmet>
+        <title>WishList</title>
+      </Helmet>
+    </>
   );
 };
 

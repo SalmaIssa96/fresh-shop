@@ -4,6 +4,7 @@ import makeStyles from '../../makeStyles';
 import CartProduct from '../../Components/CartProduct/CartProduct';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
   root: {
@@ -193,6 +194,9 @@ const CartPage = () => {
       >
         Clear All Cart
       </Button>
+      <Helmet>
+        <title>Cart</title>
+      </Helmet>
     </div>
   );
 };

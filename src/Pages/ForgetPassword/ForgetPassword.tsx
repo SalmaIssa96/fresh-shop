@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Loader from '../../Components/Loader/Loader';
+import { Helmet } from 'react-helmet';
 
 const useStyle = makeStyles(({ palette, spacing, breakpoints }) => ({
   root: {
@@ -107,6 +108,9 @@ const ForgetPassword = () => {
           Verify
         </Button>
       </form>
+      <Helmet>
+        <title>ForgetPassword</title>
+      </Helmet>
     </div>
   );
 };

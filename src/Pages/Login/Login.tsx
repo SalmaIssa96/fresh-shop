@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { InfinitySpin } from 'react-loader-spinner';
 import { useUserContext } from '../../Context/UserContext';
 import Cookies from 'universal-cookie';
+import { Helmet } from 'react-helmet';
 const cookies = new Cookies();
 
 type User = {
@@ -183,6 +184,9 @@ const Login = () => {
           </Button>
         </Link>
       </div>
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
     </div>
   );
 };

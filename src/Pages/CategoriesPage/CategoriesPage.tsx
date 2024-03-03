@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import Card from '../../Components/Card/Card';
 import Loader from '../../Components/Loader/Loader';
 import useFetchData from '../../hooks/useFetchData';
@@ -46,6 +47,9 @@ const CategoriesPage = () => {
           <Card type="category" item={item} />
         </div>
       ))}
+      <Helmet>
+        <title>Categories Page</title>
+      </Helmet>
     </div>
   );
 };

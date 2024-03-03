@@ -15,6 +15,7 @@ import {
 } from '../../Context/hooks';
 import Loader from '../../Components/Loader/Loader';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
   root: {
@@ -209,6 +210,9 @@ const ProductDetails = () => {
           Add to Cart
         </Button>
       </div>
+      <Helmet>
+        <title> Product Details </title>
+      </Helmet>
     </div>
   );
 };

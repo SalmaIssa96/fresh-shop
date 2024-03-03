@@ -5,6 +5,7 @@ import makeStyles from '../../makeStyles';
 import { useCartContext } from '../../Context/CartContext';
 import { useCheckout } from '../../Context/hooks';
 import { ShippingAddressType } from '../../types';
+import { Helmet } from 'react-helmet';
 
 const useStyle = makeStyles(({ palette, spacing }) => ({
   root: {
@@ -144,6 +145,9 @@ const Checkout = () => {
           </Button>
         </div>
       </form>
+      <Helmet>
+        <title>Checkout</title>
+      </Helmet>
     </div>
   );
 };

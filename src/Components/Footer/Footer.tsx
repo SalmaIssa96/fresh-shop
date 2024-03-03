@@ -13,6 +13,14 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
     background: palette.grey[200],
     marginTop: '50px',
   },
+  title: {
+    fontSize: '30px',
+    color: palette.primary.main,
+    fontWeight: 'bold',
+    [breakpoints.down('sm')]: {
+      fontSize: '20px',
+    },
+  },
   footerContent: {
     display: 'flex',
     flexDirection: 'column',
@@ -21,6 +29,7 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
     padding: '20px',
     [breakpoints.down('sm')]: {
       padding: '10px',
+      gap: '5px',
     },
   },
   shareEmailDiv: {
@@ -39,6 +48,9 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
   },
   input: {
     width: '70%',
+    [breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   imagesIconDIV: {
     display: 'flex',
@@ -60,6 +72,8 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
     [breakpoints.down('sm')]: {
       padding: spacing(1),
       flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
       gap: '10px',
     },
   },
@@ -68,6 +82,11 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
     alignItems: 'center',
     justifyContent: 'center',
     gap: '10px',
+    [breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      gap: '10px',
+    },
   },
 }));
 const Footer = () => {
@@ -75,7 +94,7 @@ const Footer = () => {
   return (
     <div className={classes.root}>
       <div className={classes.footerContent}>
-        <Typography variant="h5">Create FreshCart App </Typography>
+        <Typography className={classes.title}>Create FreshCart App </Typography>
         <Typography>
           We will send you a link , open it on your phone to download the app
         </Typography>
