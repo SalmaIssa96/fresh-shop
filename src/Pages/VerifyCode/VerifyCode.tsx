@@ -57,8 +57,6 @@ const VerifyCode = () => {
       );
       const data = response.data;
 
-      console.log(data, 'kjdkdjskd  ');
-
       if (data.status === 'Success') {
         setIsLoading(false);
         navigate('/reset-password');

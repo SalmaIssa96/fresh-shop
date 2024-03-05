@@ -60,8 +60,6 @@ const ForgetPassword = () => {
       );
       const data = response.data;
 
-      console.log(data);
-
       if (data.statusMsg === 'success') {
         setIsLoading(false);
         navigate('/verify-code');

@@ -117,7 +117,6 @@ const Sginup = () => {
       }
     } catch (err: any) {
       setIsLoading(false);
-      console.log(err.response.data.message, 11111111111);
       setError(err.response.data.message);
     }
   };

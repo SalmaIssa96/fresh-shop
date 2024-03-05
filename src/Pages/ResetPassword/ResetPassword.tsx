@@ -64,8 +64,6 @@ const ResetPassword = () => {
       );
       const data = response.data;
 
-      console.log(data);
-
       if (data.token) {
         setIsLoading(false);
         setUserToken(data.token);

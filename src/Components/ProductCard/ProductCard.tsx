@@ -33,9 +33,6 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
       cursor: 'pointer',
       transform: 'scale(1.08 )',
     },
-    // [breakpoints.down('md')]: {
-    //   width: '100%',
-    // },
     [breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -78,10 +75,15 @@ const useStyles = makeStyles(({ palette, spacing, breakpoints }) => ({
     padding: spacing(0, 1),
     color: 'red',
   },
+
   wishRateDiv: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  heartIcon: {
+    padding: spacing(0, 1),
+    fontSize: 'Large',
   },
 }));
 
@@ -136,7 +138,7 @@ const ProductCard = ({
             }}
           >
             <FavoriteIcon
-              className={inWishList ? classes.heartRed : classes.cartIcon}
+              className={inWishList ? classes.heartRed : classes.heartIcon}
             />
           </Button>
         </div>
